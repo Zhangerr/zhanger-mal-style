@@ -1,0 +1,294 @@
+/*
+Blue metro by zhanger: http://myanimelist.net/profile/Zhanger
+*/
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 40px #333333;
+    -moz-box-shadow: 0 0 40px #333333;
+    box-shadow: 0 0 40px #333333;
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@-moz-keyframes shadow {
+  0% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 40px #333333;
+    -moz-box-shadow: 0 0 40px #333333;
+    box-shadow: 0 0 40px #333333;
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@-ms-keyframes shadow {
+  0% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 40px #333333;
+    -moz-box-shadow: 0 0 40px #333333;
+    box-shadow: 0 0 40px #333333;
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@-o-keyframes shadow {
+  0% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 40px #333333;
+    -moz-box-shadow: 0 0 40px #333333;
+    box-shadow: 0 0 40px #333333;
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@keyframes shadow {
+  0% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 40px #333333;
+    -moz-box-shadow: 0 0 40px #333333;
+    box-shadow: 0 0 40px #333333;
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@-webkit-keyframes change {
+  0% {
+    background-color: #4682b4;
+  }
+  50% {
+    background-color: #14395e;
+  }
+  100% {
+    background-color: #4682b4;
+  }
+}
+@-moz-keyframes change {
+  0% {
+    background-color: #4682b4;
+  }
+  50% {
+    background-color: #14395e;
+  }
+  100% {
+    background-color: #4682b4;
+  }
+}
+@-ms-keyframes change {
+  0% {
+    background-color: #4682b4;
+  }
+  50% {
+    background-color: #14395e;
+  }
+  100% {
+    background-color: #4682b4;
+  }
+}
+@-o-keyframes change {
+  0% {
+    background-color: #4682b4;
+  }
+  50% {
+    background-color: #14395e;
+  }
+  100% {
+    background-color: #4682b4;
+  }
+}
+@keyframes change {
+  0% {
+    background-color: #4682b4;
+  }
+  50% {
+    background-color: #14395e;
+  }
+  100% {
+    background-color: #4682b4;
+  }
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #c8c8c8;
+}
+.td1 {
+  background-color: #123456;
+  padding: 10px;
+}
+.td2 {
+  background-color: #14395e;
+  padding: 10px;
+}
+#list_surround {
+  width: 50%;
+  margin: auto;
+  -webkit-box-shadow: 0 0 20px #333333;
+  -moz-box-shadow: 0 0 20px #333333;
+  box-shadow: 0 0 20px #333333;
+  background-color: #eee;
+  padding: 20px;
+}
+body {
+  background-color: #4682b4;
+  font-family: "Segoe UI", sans-serif;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+}
+.table_header {
+  background-color: #323232;
+}
+.category_totals {
+  color: #c8c8c8;
+  background-color: #323232;
+  border-bottom: 8px solid #c8c8c8;
+}
+tr:hover > td:not([class^="status_"]) {
+  background-color: #323232;
+}
+td {
+  padding: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+td[class^="status_"]:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+td[class^="status_"]:last-child {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-right: none !important;
+}
+td[class^="status_"] {
+  background-color: #345678;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.status_not_selected a {
+  color: #22aaee;
+}
+.status_not_selected:hover {
+  background-color: #123456;
+}
+.status_selected {
+  background-color: #123456 !important;
+}
+#copyright {
+  display: block;
+  width: 50%;
+  margin: auto;
+  text-shadow: none;
+  color: #969696;
+}
+#copyright::before {
+  content: "blue metro by zhanger.";
+}
+#grand_totals {
+  color: #c8c8c8;
+  background-color: #14395e;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 15px #000000;
+  -moz-box-shadow: 0 0 15px #000000;
+  box-shadow: 0 0 15px #000000;
+  position: relative;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+#grand_totals::before,
+#grand_totals::after {
+  border-style: solid;
+  content: "";
+  display: block;
+  bottom: -20px;
+  margin: 0;
+  position: absolute;
+  z-index: 0;
+}
+#grand_totals::before {
+  border-color: transparent transparent transparent #123456;
+  border-width: 0px 0px 20px 20px;
+  right: 0;
+}
+#grand_totals::after {
+  border-color: transparent #123456 transparent transparent;
+  border-width: 0px 20px 20px 0px;
+  left: 0;
+}
+table {
+  color: #c8c8c8;
+}
+table[class^="header"] {
+  background-color: #323232;
+  border-top: 8px solid #4682b4;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  font-size: 13px;
+}
+small {
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: #969696;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+}
+div[style^="float: right"] small {
+  font-size: 11px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+#mal_control_strip {
+  background-image: none !important;
+  background-color: #323232 !important;
+}

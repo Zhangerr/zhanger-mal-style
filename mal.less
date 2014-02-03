@@ -1,0 +1,242 @@
+/*
+Blue metro by zhanger: http://myanimelist.net/profile/Zhanger
+*/
+
+@primary: #123456; // primary color for rows of tables #A20404;
+@secondary:lighten(@primary,2%); //secondary color for rows of tables #23456;
+@text:rgb(200,200,200); //main color for text
+@table-bg:rgb(50,50,50); //background color for the headers and footers of tables
+@text-secondary:rgb(150,150,150); //secondary color for text, used in copyright and small
+@background-primary:steelblue; //primary page background color
+@background-secondary:@secondary; //secondary page background color, page will gradually change to this one and back to the primary one
+@link:#0088cc; //color of URLs
+@link-hovered:@text; //color of URLs when hovered
+@navbar:#22AAEE; //background color of the navigation bar (watching, plan to watch, etc)
+@navbar-active:@primary; //the background color of the currently active element in the navbar
+@row-hover-bg:@table-bg; //the color of each row of the table when hovered
+@table-border-top:@background-primary; //top border of table header
+@table-border-bottom:@text; //bottom border of table footer
+
+.transition(...) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-o-transition: @arguments;
+	-ms-transition: @arguments; 
+	transition: @arguments;
+}
+.animation(...) {
+	-webkit-animation: @arguments;
+	-moz-animation:    @arguments;
+	-ms-animation:     @arguments;
+	-o-animation:      @arguments;
+	animation:         @arguments;
+}
+.box-shadow (...) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.shadow-animation() {
+	0% {
+	  .box-shadow(none);
+	}
+	50% {
+	  .box-shadow(0 0 40px #333);
+	}
+	100% {
+	  .box-shadow(none);
+	}
+}
+
+.change-animation() {
+ 0% {
+    background-color: @background-primary;
+ }
+ 50% {
+    background-color: @background-secondary;
+ }
+ 100% {
+    background-color: @background-primary;
+ }
+}
+
+@-webkit-keyframes shadow {.shadow-animation();}
+@-moz-keyframes shadow {.shadow-animation();}
+@-ms-keyframes shadow {.shadow-animation();}
+@-o-keyframes shadow {.shadow-animation();}
+@keyframes shadow {.shadow-animation();}
+
+@-webkit-keyframes change{.change-animation();}
+@-moz-keyframes change{.change-animation();}
+@-ms-keyframes change{.change-animation();}
+@-o-keyframes change{.change-animation();}
+@keyframes change{.change-animation();}
+
+a {
+	color: @link;
+	text-decoration: none;	
+	&:hover,&:focus {		
+		text-decoration: none;	
+		color: @link-hovered;
+	}	
+	.transition(all 0.5s);
+}
+
+.td1 {
+	background-color: @primary;
+	padding: 10px;
+}
+
+.td2 {
+	background-color: @secondary;
+	padding: 10px;
+}
+
+#list_surround {
+	width: 50%;
+	margin: auto;
+	.box-shadow(0 0 20px #333);
+	background-color: #eee;
+	padding: 20px;
+
+	//.animation(shadow 5s infinite linear);
+}
+
+
+body {
+	background-color: @background-primary;
+	font-family: "Segoe UI",sans-serif;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.9);
+	//.animation(change 50s infinite linear);
+	font-size: 14px;
+}
+
+
+.table_header {
+	background-color: @table-bg;
+}
+
+.category_totals {
+	color: @text;
+	background-color: @table-bg;
+	border-bottom: 8px solid @table-border-bottom;
+}
+
+
+
+tr:hover {
+	&>td:not([class^="status_"]) {
+	background-color: @row-hover-bg;
+	}
+}
+
+td {	
+	padding: 10px;
+	.transition(all 0.5s);
+	&[class^="status_"]:first-child {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	&[class^="status_"]:last-child {
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 5px;
+		border-right: none !important;
+	}
+
+	&[class^="status_"] {
+		background-color: #345678;
+		.transition(all 0.5s);
+	}	
+}
+
+.status_not_selected {
+	a {
+	color: @navbar;
+	}
+	&:hover {
+		background-color: @primary;	
+
+	}
+}
+
+.status_selected {
+	background-color: @navbar-active !important;
+
+}
+
+
+#copyright {
+	display: block;
+	width: 50%;
+	margin: auto;
+	text-shadow: none;
+	color: @text-secondary;
+	&::before {
+		content: "blue metro by zhanger.";
+	}
+}
+
+#grand_totals {
+	color: @text;
+	background-color: @secondary;
+	padding: 10px;	
+	.box-shadow(0 0 15px #000); 
+	position: relative;
+	margin-left: -40px;
+	margin-right: -40px;
+	&::before,&::after {
+		border-style: solid;
+		content: "";
+		display: block;		
+		bottom: -20px;
+		margin: 0;
+		position: absolute;
+		z-index: 0;
+	}
+	&::before {
+		border-color: transparent transparent transparent @primary;	
+		border-width: 0px 0px 20px 20px;
+		right: 0;
+	}
+	&::after {
+		border-color: transparent @primary transparent transparent;
+		border-width: 0px 20px 20px 0px;
+		left: 0;
+	}
+}
+
+table {
+	color: @text;
+	&[class^="header"] {		
+		background-color: @table-bg;
+		border-top: 8px solid @table-border-top;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin:0;
+		font-size: 13px;
+	}	
+}
+
+small {
+	text-transform: uppercase;
+	font-size: 12px;
+	background-color: @text-secondary;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 2px;
+}
+
+div[style^="float: right"] {
+	small {
+		font-size: 11px;
+		background-color: transparent;
+		text-transform: uppercase;
+	}
+}
+
+#mal_control_strip {
+	background-image: none !important;
+	background-color: @table-bg !important;
+}
